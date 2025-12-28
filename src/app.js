@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 
 const app = express();
 const PORT = 3000;
@@ -10,3 +10,7 @@ app.listen(PORT, (error) => {
         console.log("Error occurred, server can't start", error);
     }
 });
+
+app.get("/", (req, res) => {
+    res.send("Hello to my app");
+})
